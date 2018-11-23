@@ -1,0 +1,46 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+image{
+    border: none;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+.iconfont:after {
+  font-family: "iconfont";
+  content: "\e607";
+  font-size: 28rpx;
+  color: #999;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -15rpx;
+  z-index: 1;
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}

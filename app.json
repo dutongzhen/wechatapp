@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/bj_new/bj_new",
+    "pages/index/index",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "drak",
+    "navigationBarBackgroundColor": "#2caf7d",
+    "navigationBarTitleText": "优居客",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#eeeeee",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

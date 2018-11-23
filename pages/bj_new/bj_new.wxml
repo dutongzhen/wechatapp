@@ -1,0 +1,69 @@
+<!--pages/bj_new/bj_new.wxml-->
+<scroll-view scroll-y="true" style='height:100vh' scroll-into-view="{{toView}}"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollY}}" scroll-with-animation='true'>
+<!-- banner -->
+<view class='banner'>
+  <image src='https://m.youjuke.com/images/tg/baojianew/banner_02.jpg' mode="widthFix" class='img'></image>
+</view>
+<view class='form_submit clearfix'>
+  <view class='row-tit' id="{{wordindex}}">
+    <p>为了报价精准,请
+      <label>准确填写</label>如下信息</p>
+  </view>
+  <view class="row-wrap clearfix">
+    <view class="label">所在区域:
+      <i>上海</i>
+    </view>
+    <picker bindchange="bindCasPickerChange" value="{{casArray[casIndex].id}}" range-key="{{'name'}}" range="{{casArray}}" name="region" class='select quyu' style='width:50%;'>
+      <view class="picker" style='font-size:30rpx;'>
+        <!-- {{recasIndex?recasIndex:"请选择"}} -->
+        {{casArray[casIndex].name}}
+      </view>
+    </picker>
+    <i class="iconfont"></i>
+  </view>
+  <view class='row-wrap area clearfix'>
+    <view class="label">房屋面积:</view>
+    <span class="fr">
+      <input class="input_area" value='{{area}}' name="area" placeholder="请输入您家房屋面积" bindinput="areaInput" type='number' />
+      <em>㎡</em>
+    </span>
+  </view>
+  <view class="row-wrap clearfix">
+    <view class="label">选择户型:</view>
+    <picker mode="multiSelector" name="housetype" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="{{'name'}}" class='select' id="pick_text">
+      <view class="picker">
+        {{multiArray[0][multiIndex[0]].name}} {{multiArray[1][multiIndex[1]].name}} {{multiArray[2][multiIndex[2]].name}} {{multiArray[3][multiIndex[3]].name}} {{multiArray[4][multiIndex[4]].name}}
+      </view>
+    </picker>
+    <i class="iconfont"></i>
+  </view>
+  <view class="row-wrap voter">
+    <button class="loginBtn" open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber'>立即获取报价</button>
+  </view>
+<!--   <view class="lock">今日已有
+    <span class="count">{{total}}</span>位用户成功获取报价
+  </view> -->
+  <view class="lock">(现在报价即送3000元装修基金)</view>
+</view>
+<view class='content'>
+  <image src='https://m.youjuke.com/images/tg/baojianew/nr_02.jpg' mode="widthFix" class='img'></image>
+</view>
+<!-- 底部公司版权信息 -->
+<view class="copy_footer">
+  <view style="display: block;text-align: center; padding: .25rem 0; font-size: 12px;color: #a6a6a6;background-color: #fff;">
+    <p>Copyright ©2013-2018 上海欢居信息技术有限公司</p>
+    <a target="_blank" rel="external nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702001840" style="background: #fff;">
+      <p style="display:inline-block;margin: 2px 0px 2px 5px; color:#a6a6a6;font-size: 12px;">沪公网安备 31010702001840号 沪ICP备13001780号-5</p>
+    </a>
+    <p>
+      <a title="联系我们" href="/about.html" style="display: inline-block;padding: 0rem 3px;color: #a6a6a6;">联系我们</a>
+      <a title="公司简介" href="/profile.html" style="display: inline-block;padding: 0rem 3px;color: #a6a6a6;">公司简介</a> 客服热线：400-920-6688</p>
+  </view>
+</view>
+</scroll-view>
+<!-- 底部跟随 -->
+<view class="gensui {{scrollTop>100 ? 'on' : 'off'}}">
+  <view class="gensui_info">
+    <a href="javascript:;" bindtap="scrollTop" data-scroll="150" data-wordindex="{{wordindex}}">立即获取报价</a>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+<!-- <web-view src="{{url}}"></web-view> -->
+<!-- head -->
+<view class="header boxC clearfix" id="header">
+  <view class="logo">
+    <image alt="放心装修就上优居客" src="https://m.youjuke.com/images/tg/applyres/logo.jpg" mode="widthFix"></image>
+  </view>
+  <view class="headerR">
+    <a class="fr" href="https://m.youjuke.com/tg/app.html">
+      <image src="https://m.youjuke.com/images/tg/applyres/app.jpg" mode="widthFix" alt="一站式装修神器APP"></image>
+    </a>
+  </view>
+</view>
+<!-- banner -->
+<view class="banner">
+  <text class='ban_h2'>您的装修报价预算</text>
+  <view class='area_info'>{{area}}㎡<span>|</span>{{house_info}}</view>
+</view>
+<!-- 半包价格 -->
+<view class="jiage">
+  <view class='jiage_h3'>半包价格 <span>¥ {{baojia}}</span></view>
+  <p>该价格为预估半包价格，不含拆旧费 </p>
+</view>
+<view class="jiage">
+    <view class='jiage_h3'><image src="https://m.youjuke.com/images/tg/applyres/sheng_03.jpg" mode="widthFix" class="sheng"></image>装修基金<image src="https://m.youjuke.com/images/tg/applyres/sheng_06.jpg" mode="widthFix" class="zhuang"></image><span>- ¥ 3000</span></view>
+    <p>装修时可抵扣装修款，最多领3000元</p>
+</view>
+<view class="jiage">
+      <view class='jiage_h3 clearfix'><em style="width: 78%">选择优居客，新家装修预算预估为</em> <span>¥ {{yjk_baojia}}</span></view>
+      <p>*以上报价仅为预估价格，详细报价需要上门量房测量后给出</p>
+</view>
+<!-- 拿到报价单  你是不是有很多担心？ -->    
+<view class="shbj_new">
+    <view class="shbj_wt"><image src="https://m.youjuke.com/images/tg/applyres/m_tc_bg.jpg" alt="拿到报价单  你是不是有很多担心？" mode="widthFix"></image></view>
+</view>
+<!-- 现在填写信息 送2重装修豪礼 -->    
+<view class="txgift">
+    <view class="txgift_tit">
+        <view class='txgift_tit_h'>张苇专家为您审核报价 <em>再送2重装修豪礼</em></view>
+        <image src="https://m.youjuke.com/images/tg/applyres/yhbg.png" alt="装修基金 装修返利" mode="widthFix"></image>
+    </view>
+    <form action="/Commit/improve_bm_info" name="search_commit" method="post">
+        <view class="rad_infoClass">
+            <view id="info_radio2">
+                <image src="https://m.youjuke.com/images/bj_expert.jpg" alt="放心装修就上优居客" mode="widthFix" style="margin-top: .5rem;"></image>
+            </view>
+        </view>
+    </form>
+</view>
+<!-- 底部 -->
+<view class="footer">       
+<view style="display: block;text-align: center; padding: .25rem 0; font-size: 12px;color: #a6a6a6;background-color: #fff;">
+	<p>Copyright ©2013-2018  上海欢居信息技术有限公司</p>
+	<a target="_blank" rel="external nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010702001840" style="background: #fff;"><p style="display:inline-block;margin: 2px 0px 2px 5px; color:#a6a6a6;font-size: 12px;">沪公网安备 31010702001840号 沪ICP备13001780号-5</p></a>
+	<p><a title="联系我们" href="/about.html" style="display: inline-block;padding: 0rem 3px;color: #a6a6a6;">联系我们</a><a title="公司简介" href="/profile.html" style="display: inline-block;padding: 0rem 3px;color: #a6a6a6;">公司简介</a>   客服热线：400-920-6688</p>
+</view>    
+</view>
+<!-- 弹窗 -->
+<view class="tc" style="display: none;">
+  <!-- 查看详情弹窗 -->
+  <view class="lookdetial" style="padding: 1.5rem 0.6rem 1rem; display: none;">
+      <i class="iconfont iclose"></i>
+      <text>（该价格为自动估算价格，实际价格以量房为准）</text>
+      <p style="">优居客客服将在24小时内给您回电，届时您可咨询装修相关的任何问题。</p>
+      <button class="iknow">我知道了</button>
+  </view>
+</view>
